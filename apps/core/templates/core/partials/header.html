@@ -1,0 +1,24 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/core/header.css' %}">
+
+<div class="header-container">
+    <div class="header-logo-container">
+        <a href="{% url 'core:index' %}">
+            <img class="header-logo" src="{% static 'images/logo.png' %}" alt="">
+        </a>        
+    </div>
+    <div class="navbar-container">
+        <div class="header-info">
+        </div>
+        <nav>
+            <a href="{% url 'core:index' %}">
+                <button class="nav-button bold">HOME</button>
+            </a>
+            <button class="nav-button bold">ESCALAS</button>
+            <button class="nav-button bold">PRODUCAO</button>
+        </nav>
+    </div>
+    
+</div>
+<hr class="header-detail">

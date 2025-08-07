@@ -1,0 +1,178 @@
+/* GLOBAL CSS */
+
+/* ==================================================
+   IMPORTS
+   ================================================== */
+
+/* Font Roboto */
+@font-face{
+    font-family: 'Roboto';
+    src: url('/static/fonts/Roboto.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* ==================================================
+   RESETS
+   ================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    color: inherit;
+    list-style-type: none;
+}
+
+/* ==================================================
+   VARIABLES
+   ================================================== */
+
+:root{
+
+    /* Colors */
+    --color-primary: #FFCC00; /* Yellow */
+    --color-secondary: #FFFFFF; /* White */
+    --color-detail1: #BA0C2F; /* Red */
+    --color-detail2: #000000; /* Black */
+
+    /* Fonts */
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* Font Sizes */
+    --size-title: 3.25rem;
+    --size-subtitle: 2.25rem;
+    --size-text: 1.25rem;
+    --size-caption: 0.8rem;
+
+    
+    /* Font Weights */
+    --weight-bold: 700;
+    --weight-semibold: 600;
+    --weight-regular: 400;
+    --weight-ligth: 300;
+    --weigth-thin: 100;
+
+    /* Font Sets */
+    --text-title: normal normal var(--weight-bold) var(--size-title) var(--font-roboto);
+    --text-subtitle: normal normal var(--weight-semibold) var(--size-subtitle) var(--font-roboto);
+    --text-text: normal normal var(--weight-regular) var(--size-text) var(--font-roboto);
+    --text-caption: normal normal var(--weight-thin) var(--size-caption) var(--font-roboto);
+
+}
+
+/* ==================================================
+   FONTS
+   ================================================== */
+
+/* Paragraph */
+p{
+    font: var(--text-text);
+    color: var(--color-detail2);
+}
+
+h1{
+    font: var(--text-title);
+    color: var(--color-detail1);
+}
+
+h2{
+    font: var(--text-subtitle);
+    color: var(--color-detail2);
+}
+
+/* Font Weights */
+
+.bold{
+    font-weight: var(--weight-bold);
+}
+
+.semibold{
+    font-weight: var(--weight-semibold);
+}
+
+.regular{
+    font-weight: var(--weight-regular);
+}
+
+.light{
+    font-weight: var(--weight-ligth);
+}
+
+.thin{
+    font-weight: var(--weight-thin);
+}
+
+/* Font Sizes */
+
+.title{
+    font-size: var(--size-title);
+}
+
+.subtitle{
+    font-size: var(--size-subtitle);
+}
+
+.text{
+    font-size: var(--size-text);
+}
+
+.caption{
+    font-size: var(--size-caption);
+}
+
+/* ==================================================
+   STRUCTURE
+   ================================================== */
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--color-secondary);
+    justify-content: center;
+}
+
+header{
+    height: 60px;
+    width: 100vw;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main{
+    width: 100vw;
+    border-radius: 15px;
+}
+
+footer{
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==================================================
+   BUTTONS
+   ================================================== */
+
+.nav-button{
+    width: 100px;
+    height: 30px;
+    color: var(--color-detail1);
+    background-color: var(--color-primary);
+}
+
+.nav-button:hover{
+    color: var(--color-primary);
+    background-color: var(--color-detail1);
+    cursor: pointer;
+}

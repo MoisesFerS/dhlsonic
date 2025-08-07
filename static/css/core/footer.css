@@ -1,0 +1,12 @@
+/* FOOTER CSS */
+
+/* Details */
+.footer-detail{
+    border: 3px solid var(--color-detail1);
+    width: 100vw;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-rows: 1fr;
+}
