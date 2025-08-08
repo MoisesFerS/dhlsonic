@@ -7,6 +7,22 @@ Format based on:
 - [Keep a Changelog](https://keepachangelog.com/)
 - [Semantic Versioning](https://semver.org/)
 
+## [0.4.0] - 2025-08-08 - App Creation: Schedule
+
+### Added
+
+- Created the `schedule` app to manage work schedules.
+- Created the `schedule/templates/schedule/` folder containing:
+    - `index.html` – Page containing the calendar for each schedule.
+- Created the `static/schedule/` folder containing:
+    - `index.css` – Styles for the calendar page.
+
+### Changed
+
+- Updated `dhlsonic/urls.py` to route the `/schedule` path to the `schedule` app.
+- Updated the navbar to redirect the corresponding button to the `schedule` page.
+- Registered the `schedule` app in `INSTALLED_APPS` in `settings.py`.
+
 ## [0.3.0] - 2025-08-07 - Docker and phpMyAdmin
 
 ### Added
@@ -22,7 +38,7 @@ Format based on:
 
 ## [0.2.0] - 2025-08-07 - App Creation: Core
 
-### ADDED
+### Added
 
 - Created the `core` app to manage the main views and templates.
 - Created the `core/templates/` folder containing:
@@ -46,14 +62,14 @@ Format based on:
 - Added `logo.png` to `static/images/`.
 - Added `favicon.ico` to `static/icons/`.
 
-### CHANGED
+### Changed
 
 - Registered the `core` app in `INSTALLED_APPS` in `settings.py`.
 - Updated `dhlsonic/urls.py` to route the default path to the `core` app.
 
 ## [0.1.0] - 2025-08-07 - Project Initialization
 
-### ADDED
+### Added
 
 - Created files:
     - `.gitignore` – Keeps unwanted files out of the repository.
@@ -62,6 +78,6 @@ Format based on:
     - `requirements.txt` – Lists the project's dependencies.
 - Created the django project `dhlsonic` and made basic configurations.
 
-### CHANGED
+### Changed
 
 - Updated the `README.md`.

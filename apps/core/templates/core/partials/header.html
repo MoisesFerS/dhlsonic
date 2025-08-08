@@ -13,10 +13,12 @@
         </div>
         <nav>
             <a href="{% url 'core:index' %}">
-                <button class="nav-button bold">HOME</button>
+                <button class="nav-button bold caption">HOME</button>
             </a>
-            <button class="nav-button bold">ESCALAS</button>
-            <button class="nav-button bold">PRODUCAO</button>
+            <a href="{% url 'schedule:index' %}">
+                <button class="nav-button bold caption">ESCALAS</button>
+            </a>            
+            <button class="nav-button bold caption">PRODUCAO</button>
         </nav>
     </div>
     

@@ -29,6 +29,9 @@ from django.urls import path, include
 urlpatterns = [
 
     # Index page(redirects to core app)
-    path('', include('apps.core.urls'))
+    path('', include('apps.core.urls')),
+
+    # Schedule page(redirects to schedule app)
+    path('schedule/', include('apps.schedule.urls')),
 
 ]
