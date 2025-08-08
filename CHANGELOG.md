@@ -7,9 +7,22 @@ Format based on:
 - [Keep a Changelog](https://keepachangelog.com/)
 - [Semantic Versioning](https://semver.org/)
 
-## [0.2.0] - 2025-08-07 - App Creation: Core
+## [0.3.0] - 2025-08-07 - Docker and phpMyAdmin
 
 ### Added
+
+- Created the `docker-compose.yml` file to configure and coordinate containers.
+- Created the `Dockerfile` to build the Docker image.
+
+### Changed
+
+- Updated `settings.py` to connect to the dockerized database.
+- Updated the requirements section in `README.md` to include Docker.
+- Updated `requirements.txt` to include `mysqlclient`.
+
+## [0.2.0] - 2025-08-07 - App Creation: Core
+
+### ADDED
 
 - Created the `core` app to manage the main views and templates.
 - Created the `core/templates/` folder containing:
@@ -33,7 +46,7 @@ Format based on:
 - Added `logo.png` to `static/images/`.
 - Added `favicon.ico` to `static/icons/`.
 
-### Changed
+### CHANGED
 
 - Registered the `core` app in `INSTALLED_APPS` in `settings.py`.
 - Updated `dhlsonic/urls.py` to route the default path to the `core` app.

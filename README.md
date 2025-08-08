@@ -11,6 +11,7 @@ All changes are documented in the [`CHANGELOG.md`](./CHANGELOG.md) file.
 ## Requirements
 
 - Python 3.12
+- Docker
 
 All project dependencies are listed in the `requirements.txt` file.  
 To set up the environment:
