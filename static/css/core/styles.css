@@ -34,10 +34,11 @@
 :root{
 
     /* Colors */
-    --color-primary: #FFCC00; /* Yellow */
-    --color-secondary: #FFFFFF; /* White */
-    --color-detail1: #BA0C2F; /* Red */
-    --color-detail2: #000000; /* Black */
+    --color-primary: #BA0C2F; /* Red */
+    --color-secondary: #FFCC00; /* Yellow */
+    --color-detail1: #000000; /* Black */
+    --color-detail2: #FFFFFF; /* White */
+    --color-detail3: #7A0215; /* Dark Red */
 
     /* Fonts */
     --font-roboto: 'Roboto', sans-serif;
@@ -71,17 +72,17 @@
 /* Paragraph */
 p{
     font: var(--text-text);
-    color: var(--color-detail2);
+    color: var(--color-secondary);
 }
 
 h1{
     font: var(--text-title);
-    color: var(--color-detail1);
+    color: var(--color-primary);
 }
 
 h2{
     font: var(--text-subtitle);
-    color: var(--color-detail2);
+    color: var(--color-secondary);
 }
 
 /* Font Weights */
@@ -110,18 +111,22 @@ h2{
 
 .title{
     font-size: var(--size-title);
+    color: var(--color-primary);
 }
 
 .subtitle{
     font-size: var(--size-subtitle);
+    color: var(--color-secondary);
 }
 
 .text{
     font-size: var(--size-text);
+    color: var(--color-secondary);
 }
 
 .caption{
     font-size: var(--size-caption);
+    color: var(--color-secondary);
 }
 
 /* ==================================================
@@ -132,14 +137,14 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    background-color: var(--color-secondary);
+    background-color: var(--color-detail2);
     justify-content: center;
 }
 
 header{
     height: 60px;
     width: 100vw;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,14 +154,24 @@ header{
 main{
     width: 100vw;
     border-radius: 15px;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
 
 footer{
     width: 100vw;
     height: 100px;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
     align-items: center;
 }
 
@@ -167,12 +182,87 @@ footer{
 .nav-button{
     width: 100px;
     height: 30px;
-    color: var(--color-detail1);
-    background-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
 }
 
 .nav-button:hover{
-    color: var(--color-primary);
-    background-color: var(--color-detail1);
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
     cursor: pointer;
+}
+
+.button-primary{
+    width: 135px;
+    height: 50px;
+    border-radius: 15px;
+    font: var(--text-text);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.button-primary:hover{
+    background-color: var(--color-detail3);
+    cursor: pointer;
+}
+
+.deactivated{
+    background-color: var(--color-detail2);
+    color: var(--color-primary);
+    border: solid 2px var(--color-primary);
+}
+
+/*  ============================================================
+    MODAL STRUCTURE
+    ============================================================ */ 
+
+.modal-container{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content{
+  position: relative;
+  background-color: var(--color-detail3);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+  
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/*  ============================================================
+    ERROR MODAL
+    ============================================================ */ 
+
+.error-modal-container{
+    padding-top: 80vh; 
+}
+
+.error-modal-content{
+  width: 500px;
+  height: 100px;
+  padding: 10px;
 }

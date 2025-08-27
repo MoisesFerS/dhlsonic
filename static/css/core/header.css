@@ -43,6 +43,6 @@ nav{
 
 /* Details */
 .header-detail{
-    border: 3px solid var(--color-detail1);
+    border: 3px solid var(--color-primary);
     width: 100vw;
 }

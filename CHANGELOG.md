@@ -7,6 +7,22 @@ Format based on:
 - [Keep a Changelog](https://keepachangelog.com/)
 - [Semantic Versioning](https://semver.org/)
 
+## [0.5.0] - 2025-08-26 - App Creation: Login
+
+### Added 
+
+- Created the `login` app to manage the authentication of administrators in the app.
+- Created the `error_modal.html` into `core/templates/partials/` to display error messages comming from the backend.
+- Created the `scripts.js` into `static/js/` to contain the global javascripts used in the project.
+- Created the `login/templates/login/` folder containing:
+    - `index.html` – Page resposible for the user authentication.
+- Created the `static/login/` folder containing:
+    - `index.css` – Styles for the authentication page.
+
+### Changed
+
+- Registered the `auth` app in `INSTALLED_APPS` in `settings.py`.
+
 ## [0.4.0] - 2025-08-08 - App Creation: Schedule
 
 ### Added

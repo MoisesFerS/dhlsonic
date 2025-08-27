@@ -34,4 +34,7 @@ urlpatterns = [
     # Schedule page(redirects to schedule app)
     path('schedule/', include('apps.schedule.urls')),
 
+    # Login page(redirects to login app)
+    path('login/', include('apps.login.urls'))
+
 ]

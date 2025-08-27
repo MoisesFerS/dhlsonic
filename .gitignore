@@ -12,6 +12,8 @@ migrations/
 .env
 venv/
 env/
+venv-win/
+venv-linux/
 
 # OS temporary files
 .DS_Store
